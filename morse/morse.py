@@ -84,8 +84,6 @@ def main():
             exit = 1
         else:
             print("Option does not exist")
-
-        print("\n")
-
+            
 if __name__ == '__main__':
     main()
