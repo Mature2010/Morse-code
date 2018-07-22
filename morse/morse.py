@@ -51,9 +51,12 @@ def main():
     exit = 0
 
     while exit == 0:
-        election = input("[T]ext to Morse\n[M]orse to Text\n[L]isten morse\n[E]xit\n-> ").upper()
+        election = input("[D]ictionary\n[T]ext to Morse\n[M]orse to Text\n[L]isten morse\n[E]xit\n-> ").upper()
 
-        if election == 'T':
+        if election == 'D':
+            for key, value in dictionary.items():
+                print(f"{key} : {value}")
+        elif election == 'T':
             text = input("Message:\n").upper()
             for key in text:
                 print(f"{dictionary.get(key)}  ", end="")
