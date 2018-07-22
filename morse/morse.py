@@ -1,6 +1,7 @@
 #!usr/bin/local/python3
 # -*- coding: utf-8 -*-
 import os
+from time import sleep
 
 def main():
     dictionary = {
@@ -75,7 +76,10 @@ def main():
                     os.system("mpv s.ogg")
                 elif i == "·":
                     os.system("mpv p.ogg")
-                else: pass
+                elif i == "/":
+                    sleep(.8)
+                elif i == "":
+                    sleep(.4)
         elif election == 'E':
             exit = 1
         else:
