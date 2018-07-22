@@ -67,7 +67,6 @@ def main():
         elif election == 'L':
             text = input("Message:\n")
             word = text.split(" ")
-            print(word)
             for i in word:
                 if i == "_":
                     os.system("mpv s.ogg")
