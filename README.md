@@ -1,4 +1,4 @@
-c# Morse-code
+# Morse-code
 A morse code encoder and decoder / Un codificador y decodificador de código morse.
 
 - You need python 3 / Necesitas python 3
