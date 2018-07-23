@@ -54,15 +54,19 @@ def grammar():
         print(f"{key} : {value}")
 
 def encoder(text):
-    for key in text:
-        print(f"{dictionary.get(key)}  ", end="")
+    message = ""
+    for key in text.upper():
+        message += dictionary.get(key) + "  "
+    return message
 
 def decoder(text):
+    message = ""
     word = text.split("  ")
     for morse in word:
         for key, value in dictionary.items():
             if value == morse:
-                print(f"{key}", end="")
+                message += key
+    return message
 
 def playMorse(text):
     word = text.split(" ")
@@ -85,11 +89,11 @@ def main():
         if election == 'D':
             grammar()
         elif election == 'T':
-            text = input("Message:\n").upper()
-            encoder(text)
+            text = input("Message:\n")
+            print(encoder(text))
         elif election == 'M':
             text = input("Message:\n")
-            decoder(text)
+            print(decoder(text))
         elif election == 'L':
             text = input("Message:\n")
             playMorse(text)
